@@ -1,0 +1,15 @@
+[package]
+name = "web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { workspace = true, features = ["router"] }
+ui = { workspace = true }
+web-sys = { version = "0.3.77", features=["Screen", "Window", "HtmlElement", "CssStyleDeclaration"]}
+wasm-bindgen = {version = "0.2.99"}
+
+[features]
+default = []
+web = ["dioxus/web"]
+server = ["dioxus/server"]

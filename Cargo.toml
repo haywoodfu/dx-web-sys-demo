@@ -1,0 +1,31 @@
+[workspace]
+resolver = "2"
+members = [
+    "ui",
+    "web",
+    "desktop",
+    "mobile",
+    "server",
+]
+
+[workspace.dependencies]
+dioxus = { version = "0.6.0" }
+web-sys = { version = "0.3.66", feature=["Screen", "Window", "HtmlElement", "CssStyleDeclaration"]}
+wasm-bindgen = {version = "0.2.99"}
+
+
+# workspace
+ui = { path = "ui" }
+server = { path = "server" }
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
