@@ -12,6 +12,7 @@ pub fn Echo() -> Element {
         document::Link { rel: "stylesheet", href: ECHO_CSS }
         div {
             id: "echo",
+            style: "width:100%;",
             h4 { "ServerFn Echo" }
             input {
                 id: "echo-input",
@@ -21,11 +22,7 @@ pub fn Echo() -> Element {
                     response.set(data);
                 },
             }
-            button {
-                id: "fixed-button",
-                style: "position: fixed; bottom: 0; left: 0;width:200px;height:50px; background-color: #f44336; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;",
-                "Echo"
-            }
+            
             if !response().is_empty() {
                 p {
                     "Server echoed: "

@@ -6,8 +6,10 @@ edition = "2021"
 [dependencies]
 dioxus = { workspace = true, features = ["router"] }
 ui = { workspace = true }
-web-sys = { version = "0.3.77", features=["Screen", "Window", "HtmlElement", "CssStyleDeclaration"]}
+web-sys = { version = "0.3.77", features=["Screen", "Window", "HtmlElement", "CssStyleDeclaration", "KeyboardEvent", "VisualViewport"]}
 wasm-bindgen = {version = "0.2.99"}
+dioxus-logger = "0.6.1"
+dioxus-web = { version = "0.6.1" }
 
 [features]
 default = []

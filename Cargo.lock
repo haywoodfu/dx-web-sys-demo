@@ -5079,6 +5079,8 @@ name = "web"
 version = "0.1.0"
 dependencies = [
  "dioxus",
+ "dioxus-logger",
+ "dioxus-web",
  "ui",
  "wasm-bindgen",
  "web-sys",
